@@ -19,7 +19,11 @@ angular.module('myApp', []).
     controller('LevelC', function ($scope) {
         $scope.title = "Level C";
         $scope.valueC = 1;
+        $scope.numberOfChangeValueA = 0;
         $scope.inc = function () {
             $scope.valueC++;
         };
+        $scope.$watch('valueA', function(newValue, oldValue) {
+            $scope.numberOfChangeValueA++;
+        });
     });
