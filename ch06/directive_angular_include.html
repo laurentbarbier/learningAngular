@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Data Include Directive</title>
+    <style>
+        .large {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            font: bold 50px/80px verdana, serif;
+            border: 6px black ridge;
+        }
+
+        .small {
+            background-color: lightgrey;
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myController">
+    [<a ng-click="titleBar='large_title.html'">Make title large</a>]
+    [<a ng-click="titleBar='small_title.html'">Make title small</a>]
+    <div ng-include="titleBar"></div>
+</div>
+<script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+<script src="js/directive_angular_include.js"></script>
+</body>
+</html>
