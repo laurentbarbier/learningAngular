@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Scope Variable Watch</title>
+</head>
+<body>
+<div ng-controller="myController">
+    <h2>Watching Values in the AngularJS Scope</h2>
+    Select Color:
+    <span ng-repeat="mColor in mColors">
+        <span ng-style="{color: mColor}"
+              ng-click="setColor(mColor)">
+            {{mColor}}
+        </span>
+    </span><hr>
+    <span ng-click="hit()">[+]</span>
+    Hits: {{hits}}<br>
+    <span ng-click="miss()">[+]</span>
+    Misses: {{misses}}
+    <hr>
+    Object: {{myObj|json}} <br>
+    Number of changes: {{changes}}
+</div>
+<script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+<script src="js/scope_watch.js"></script>
+</body>
+</html>
