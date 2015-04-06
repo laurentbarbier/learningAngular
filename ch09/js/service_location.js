@@ -20,7 +20,7 @@ angular.module('myApp', [])
         };
 
         $scope.changeHash = function () {
-            location.path("newHash");
+            location.hash("newHash");
             $scope.updateLocationInfo();
         };
 
