@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Custom time service</title>
+    <style>
+        span {
+            color: lightgreen;
+            background-color: black;
+            border: 3px ridge;
+            padding: 2px;
+            font: 14px/18px arial, serif;
+        }
+    </style>
+</head>
+<body>
+<h2>Custom Time Service</h2>
+
+<div ng-controller="NYController">
+    New York Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="LAController">
+    Los Angeles Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="LondonController">
+    London Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="ParisController">
+    Paris Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="TKController">
+    Tokyo Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="SGController">
+    Singapour Time:
+    <span>{{myTime}}</span>
+</div><hr>
+<div ng-controller="TimeController">
+    All Times:
+    <table>
+        <tr>
+            <th ng-repeat="city in cities">
+                {{city}}
+            </th>
+        </tr>
+        <tr>
+            <td ng-repeat="city in cities">
+                <span>{{getTime(city)}}</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+<script src="js/service_custom_time.js"></script>
+</body>
+</html>
